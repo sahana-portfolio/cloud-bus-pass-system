@@ -82,10 +82,11 @@ Then open:
 📸 Screenshots
 
 ### 📝 Apply Page  
-![Apply Page](https://github.com/sahana-portfolio/cloud-bus-pass-system/blob/main/admin.png)
+![Apply Page](https://raw.githubusercontent.com/sahana-portfolio/cloud-bus-pass-system/main/apply.png)
 
 ### 🧑‍💼 Admin Dashboard  
-![Admin Dashboard](https://github.com/sahana-portfolio/cloud-bus-pass-system/blob/main/admin.png)
+![Admin Dashboard](https://raw.githubusercontent.com/sahana-portfolio/cloud-bus-pass-system/main/admin.png)
 
 ### 🪪 Digital Bus Pass  
-![Digital Pass](https://github.com/sahana-portfolio/cloud-bus-pass-system/blob/main/pass.png)
+![Digital Pass](https://raw.githubusercontent.com/sahana-portfolio/cloud-bus-pass-system/main/pass.png)
+
