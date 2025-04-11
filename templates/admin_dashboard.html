@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - Applications</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .missing {
+            color: red;
+            font-weight: bold;
+        }
+        .view-link {
+            text-decoration: none;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>👨‍💼 <b>Admin Dashboard - Applications</b></h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>College</th>
+            <th>Route</th>
+            <th>Duration</th>
+            <th>Status</th>
+            <th>ID Proof</th>
+            <th>Action</th>
+        </tr>
+        {% for application in applications %}
+        <tr>
+            <td>{{ application[1] }}</td>
+            <td>{{ application[2] }}</td>
+            <td>{{ application[3] }}</td>
+            <td>{{ application[4] }}</td>
+            <td>{{ application[5] }}</td>
+            <td>
+                {% if application[6] %}
+                    <a href="{{ url_for('static', filename=application[6].split('static/')[1]) }}" class="view-link" target="_blank">View ID</a>
+                {% else %}
+                    <span class="missing">❌ ID proof file is missing!</span>
+                {% endif %}
+            </td>
+            <td>
+                <form action="/update_status/{{ application[0] }}" method="POST">
+                    <select name="status">
+                        <option value="Pending" {% if application[5] == "Pending" %}selected{% endif %}>Pending</option>
+                        <option value="Approved" {% if application[5] == "Approved" %}selected{% endif %}>Approved</option>
+                        <option value="Rejected" {% if application[5] == "Rejected" %}selected{% endif %}>Rejected</option>
+                    </select>
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

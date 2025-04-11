@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track My Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>🔍 Track My Bus Pass Application</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Enter Your Full Name" required>
+            <input type="submit" value="Check Status">
+        </form>
+
+        {% if status %}
+            <br>
+            <h3>Status: {{ status }}</h3>
+            <p><strong>Route:</strong> {{ route }}</p>
+            <p><strong>Duration:</strong> {{ duration }}</p>
+            <a href="/pass/{{ id }}">🎟️ View Your Bus Pass</a>
+        {% elif status is not none %}
+            <p>No application found with this name.</p>
+        {% endif %}
+        
+        <br><a href="/">⬅️ Back to Home</a>
+    </div>
+</body>
+</html>

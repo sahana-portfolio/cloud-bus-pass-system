@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply for Bus Pass</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>🚌 Bus Pass Application</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your Full Name" required>
+            <input type="text" name="college" placeholder="College Name" required>
+            <input type="text" name="route" placeholder="Route (e.g., Nagawara)" required>
+            <input type="text" name="duration" placeholder="Duration (e.g., 1 Semester)" required>
+            <input type="file" name="id_proof" required>
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+</body>
+</html>

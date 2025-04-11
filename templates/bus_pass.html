@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Digital Bus Pass</title>
+    <style>
+        .card {
+            width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            text-align: center;
+            border: 2px dashed #007bff;
+            border-radius: 10px;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>🎟️ Digital Bus Pass</h2>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>College:</strong> {{ college }}</p>
+        <p><strong>Route:</strong> {{ route }}</p>
+        <p><strong>Duration:</strong> {{ duration }}</p>
+        <p><strong>Status:</strong> {{ status }}</p>
+        <br>
+        <a href="/">⬅️ Back to Home</a>
+    </div>
+</body>
+</html>
