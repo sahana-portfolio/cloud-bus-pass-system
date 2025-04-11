@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚌 Cloud-Based Bus Pass System
 
 A smart, secure, and professional web-based application to manage student bus pass applications and approvals. Built using **Flask**, **SQLite**, and **Python**, this system is part of my internship with **CodeAlpha**, April 2025.
@@ -90,3 +91,7 @@ Then open:
 ### 🪪 Digital Bus Pass  
 ![Digital Pass](https://raw.githubusercontent.com/sahana-portfolio/cloud-bus-pass-system/main/pass.png)
 
+=======
+# cloud-bus-pass-system
+A cloud-based smart web app for managing college student bus pass applications.
+>>>>>>> 56e6e29990986ddc1efb36d97fa38955337815eb
